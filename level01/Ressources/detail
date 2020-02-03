@@ -1,0 +1,14 @@
+1. cat /etc/passwd and then we see this weird line as below
+	flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash 
+	42hDRfypTqqnw should be the encrypted string
+2. echo "42hDRfypTqqnw" > ~/pass 
+	save this encrypted string in a file
+3. use John The Ripper to get the passwd
+	https://github.com/magnumripper/JohnTheRipper/tree/bleeding-jumbo/
+	is the git for John
+	clone it to my host pc
+	follow the doc to install it
+4. john ~/pass 
+	get the passwd is:	abcdefg
+5. su flag01 with this passwd
+6. getflag with the token f2av5il02puano7naaf6adaaf

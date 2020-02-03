@@ -1,0 +1,10 @@
+1. so there's 2 file, one binary and one file name token
+2. ./level08 we have the result ./level08 [file to read]
+3. ./level08 token
+	You may not access 'token'
+4. we make a symbol link 
+ln -s /home/user/level08/token /tmp/maflag
+5. ./level08 /tmp/maflag
+ here we go quif5eloekouj29ke0vouxean
+6. opps doesn't work try flag08
+	it works with getflag , we get the token 25749xKZ8L7DkSCwJkT9dyv6f

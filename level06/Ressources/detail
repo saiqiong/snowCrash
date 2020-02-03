@@ -1,0 +1,16 @@
+1. with ls we know there is 2 files
+	level06(binary)  level06.php
+2. ./level06
+we got PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4
+3. echo "hey test" > /tmp/test    and then ./level06 /tmp/test 
+	we got hey test printed out
+	so command line arguments passed to the binary file level06 is passed to the leve	l06.php and the level06.php reads the content of the file and prints it to the sta	ndard output.
+4. with http://beautifytools.com/php-beautifier.php
+	we can see the php code more easily, they first read the file from the command we	provide to binary level06, and then:
+5. they use quite  a lot of regex with preg_replace(pattern, replacement, origin)
+	php code basically call function x , and print it's result
+	first regex in function x, it searches for the pattern [x ...], with -e modifier,means instead of replace by a string, it eval that string means it will call y function with what back refrence of capture group 2 as argument, means anyth between [x and ].
+6. We can use the execution operators( ` ) to execute shell commands. So to execute the getflag program we can use the following command :
+	echo '[x ${`getflag`} ]' > /tmp/getflag06
+	./level06 /tmp/getflag06 
+	we got the flag wiok45aaoguiboiki2tuin6ub

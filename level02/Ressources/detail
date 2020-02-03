@@ -1,0 +1,9 @@
+1. there is a .pcap file named level02.pcap
+	pcap stands for Packet CAPture. A pcap file is created by tools that caputre network packets (tcp, udp, etc) and monitors network. Tools such as Wireshark can do this. In a pcap file the whole monitored data is stored.
+2. tranfer this file to our host pc(ip add can be different, below is my vm ip at home)
+	scp -P 4242 level02@192.168.1.42:/home/user/level02/level02.pcap .
+3. install Wireshark and open the file with it.
+4. line 43 looks weird line with " Password: 
+	double click Follow->TCP stream, use show and save as TUF-8, ft_wandrNDRelL0L for flag02 Password.
+5. su flag02 with this Password and getflag
+6. here we go: kooda2puivaav1idi4f57q8iq

@@ -1,0 +1,10 @@
+1. like last one here we have a bonary file and a token file
+2. ./level09 we have You need to provied only one arg.
+3../level09 token we have tpmhr
+4. cat token f4kmm6p|=�p�n��DB�Du{�� 
+	looks like encoded.
+5. make more tries ./level09 12345678 we have 13579;=? etc.
+6. find the rule here what printed out each letter is the letter of the input plus it's position, that's why 1 is 1, 2 is 3, 3 is 5 etc.
+7. we need to right a simple program to read the output the right content.
+when i try to save a c file in the current directory it's not happy so i am gonna make the file in /tmp directory
+8. 

