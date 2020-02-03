@@ -1,0 +1,12 @@
+1. trying to find any files that belongs to user flag00 
+	with find / -user flag00      but many error message, need to turn off the error output 2
+2. find / -user flag00 2>/dev/null       got two results
+	/usr/sbin/john
+	/rofs/usr/sbin/john
+3. cat either of the file , got
+	cdiiddwpgswtgt
+	should be cripted--Caesar Cypther actually
+4, search online a decode site 
+5. we got     nottoohardhere
+6. with above pass to flag00, after we launch getflag 
+	we have the token x24ti5gi3x0ol2eh4esiuxias

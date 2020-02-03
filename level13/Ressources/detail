@@ -1,0 +1,15 @@
+1. we run ./level13 we got UID 2013 started us but we we expect 4242
+	if we do ll, we see level13 binary owned by flag13, we certainly don't have the right.
+2. when we do nm or strings level13 we know this program is using getuid for check the uid
+2.	gdb -q ./level13 # -q to not display gdb informations
+	disass main # Dump of assembler code for function main
+	 # we can see  0x080485a1 address is calling getuid
+	  #so need to set a break point before that address which is 0x0804859f
+	break *0x0804859f
+	run
+		#we see   0x080485c6 is calling exit probabaly when the uid is not rig		ht, so we wanna jump directly to address after this which is 0x080485cb
+	jump *0x080485cb
+3. here we hv the token 2A31L79asukciNyi8uppkEuSx
+
+		
+

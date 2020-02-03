@@ -1,0 +1,9 @@
+1.  cat level04.pl we can see it;s a perl scripting
+2. localhost:4747 which indicates that the script is running on port 4747 on our localhost (current OS)
+	In the source code we see that the script uses CGI (Common Gateway Interface) This is a perl module to do web related stuff.
+3. qw(...) (quote word) function takes some arguments separeted by spaces and it returns a list of quoted (') strings of the given paramenters. 
+4. function x is called with the arguments of the result of param x
+	we can make the param x a shell command
+	getflag is what we want to run 
+5. curl 'localhost:4747/?x=$(getflag)'
+ got the token ne2searoevaevoem4ov4ar8ap

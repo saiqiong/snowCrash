@@ -1,0 +1,14 @@
+1. there is no file, after tried many small things, starting to try with gdb with getflag
+	gdb -g getflag
+2. disass main #Dump of assembler code for function main
+	since getflag is printing a pass, focus on put write function
+	start from end of the dump aroud many put, the next line is always jump to <main + 1257> , this 1257 must br somehow special
+4. set a break point from the main function , jump to 1257's address
+5. b main
+	run 
+	jump *0x08048e2f
+	got stack smashing detected ***: /bin/getflag terminated, and nothing.
+	then need to try a address which is before that, but around put or write , of course not the address with jump to 1257
+6. after tried many with jump to address 0x08048de5
+	got 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ is the pass for flag14
+7. with getflag we have      7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
